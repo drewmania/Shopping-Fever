@@ -8,6 +8,9 @@
     <!--bootstrap css-->
     <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
 
@@ -21,7 +24,7 @@
 
             <div class = "order-lg-2 nav-btns">
                 <button type = "button" class = "btn position-relative">
-                    <i class = "fa fa-shopping-cart"></i>
+                    <i class = "fa fa-shopping-cart" id="shoppingCart"></i>
                     <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
                 </button>
                 <button type = "button" class = "btn position-relative">
@@ -88,6 +91,7 @@
     </header>
     <!-- end of header -->
 
+    
 
     <!-- featured -->
     <section id="featured">
@@ -257,13 +261,47 @@
         </div>
     </section>
 
+    <!-- Cart Display -->
+    <div class="cartContainer" id="cartContainer">
+        <div class="titleContainer">
+            <h3 class="titleCart">Your Cart</h3>
+            <box-icon name='x' id="exitCart"></box-icon>
+        </div>
+        
+        <!-- Content Items -->
+        <div class="itemContainer">
+            <div class="cartItem">
 
+                <!-- Img Product -->
+               <img src="images/products/f1.jpg" alt="" class="product-img"> 
+
+               <!-- Item Info -->               
+               <div class="itemInfo">
+                    <strong>Cartoon Palm Tree T-Shirt</strong>
+                    <input type="number" name="" id="" class="quantity">
+                    <p class="price">$78</p>
+               </div>
+
+               <!-- Remove From Cart -->
+               <box-icon type='solid' name='trash-alt'></box-icon>
+            </div>
+        </div>
+        
+        <!-- Total -->
+        <div class="totalContainer">
+            <strong>Total</strong>
+            <strong class="total" id="total">$0</strong>
+            <button class="buy-now">BUY NOW</button>
+        </div>
+    </div>
+
+    
     <script src="https://kit.fontawesome.com/5427f56a8f.js" crossorigin="anonymous"></script>
     <!--jQuerry js-->
     <script src = "js/jquery-3.6.0.js"></script>
     <!--bootstrap js-->
     <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 
-    <script src="JS/Main.js" defer></script>
+    <script src="JS/Main.js" defer type="module"></script>
 </body>
 </html>
