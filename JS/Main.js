@@ -1,4 +1,4 @@
-import { getTotal } from "./cart.js"
+import { changeQuantity, getTotal } from "./cart.js"
 
 // Show Shopping cart
 document.getElementById('shoppingCart').addEventListener('click', e=> {
@@ -15,4 +15,7 @@ document.getElementById('exitCart').addEventListener('click', e=> {
     }, 1500);
 })
 
+        
+
+changeQuantity()
 getTotal()
